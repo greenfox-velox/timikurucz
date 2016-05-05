@@ -1,0 +1,31 @@
+body {
+    width: 300px;
+    margin: auto;
+}
+
+p {
+  font-size: 18px;
+}
+
+.first_box {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+  border-bottom: 2px black solid;
+  padding: 20px;
+  margin: 0;
+}
+
+.box {
+  border-right: 2px black solid;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
+  padding: 20px;
+  margin: 0;
+}
+
+.last_box {
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+  padding: 20px;
+  margin: 0;
+}

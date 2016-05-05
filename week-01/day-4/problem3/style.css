@@ -1,0 +1,21 @@
+p {
+  color: blue;
+  font-size: 30px;
+  background: yellow;
+  padding: 20px;
+  width: 240px;
+  border: 5px solid black;
+  margin: 0;
+}
+
+.box1 {
+  margin: 10px auto;
+  padding: 40px;
+  width: 290px;
+  background: green;
+}
+
+.box2 p {
+  background: #00ffff;
+  color: red;
+}

@@ -1,0 +1,25 @@
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: orange;
+}
+
+.foods {
+  list-style: square;
+  color: blue;
+}
+
+.fruits {
+  list-style: disc;
+  color: black;
+}
+
+.vegetables {
+  color: black;
+}
+
+.red_dot {
+  color: red
+}

@@ -1,0 +1,27 @@
+body {
+    width: 280px;
+    margin: 0 auto;
+}
+
+p {
+  font-size: 18px;
+}
+
+.box {
+  border: 2px black solid;
+  padding: 40px;
+  background-image: url("duck.png");
+  background-repeat: no-repeat;
+}
+
+.box1 {
+  background-position: left;
+}
+
+.box2 {
+  background-position: center;
+}
+
+.box3 {
+  background-position: right bottom;
+}
