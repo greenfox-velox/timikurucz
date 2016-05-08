@@ -19,7 +19,7 @@ h2 {
   color: grey;
   font-weight: 300;
   text-align: center;
-  margin-top:0;
+  margin-top: 0;
 }
 
 article {
@@ -42,12 +42,12 @@ img {
 
 a {
   color: black;
-  font-weight:600;
+  font-weight: 600;
 }
 
 hr {
-  border:none;
-  border-top:5px dotted;
-  color:black;
+  border: none;
+  border-top: 5px dotted;
+  color: black;
   width: 5%;
 }
