@@ -15,8 +15,8 @@ body {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  width: 540px;
   position: relative;
+  width: 540px;
 }
 
 .header {
