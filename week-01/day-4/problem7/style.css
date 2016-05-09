@@ -7,7 +7,7 @@ p {
   font-size: 18px;
 }
 
-.first_box {
+.first-box {
   border-left: 2px black solid;
   border-right: 2px black solid;
   border-bottom: 2px black solid;
@@ -23,7 +23,7 @@ p {
   margin: 0;
 }
 
-.last_box {
+.last-box {
   border-left: 2px black solid;
   border-right: 2px black solid;
   padding: 20px;
