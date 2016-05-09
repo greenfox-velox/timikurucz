@@ -1,0 +1,58 @@
+body {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  height: 750px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 25 40 30 40;
+}
+
+.header {
+  background: turquoise;
+  width: 100%;
+  height: 100px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.aside-left {
+  background: orange;
+  min-width: 100px;
+  height: 500px;
+}
+
+.content {
+  background: red;
+  width: 50%;
+  height: 500px;
+  position: relative;
+}
+
+.aside-right {
+  background: purple;
+  min-width: 100px;
+  height: 500px;
+}
+
+.black-square {
+  width: 50px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.footer {
+  background: blue;
+  width: 100%;
+  height: 100px;
+}
