@@ -1,0 +1,39 @@
+body {
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: auto 0;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  width: 380px;
+  padding: 2px 45px;
+  border: 1px solid black;
+  text-align: justify;
+}
+
+.duck-box{
+  flex-flow: row;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.duck-to-left {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.duck-to-right {
+  float: right;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.text {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+}
