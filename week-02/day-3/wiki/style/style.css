@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  margin: 0;
+
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background: turquoise;
+  width: 100%;
+  height: 50px;
+}
+
+.user-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-text {
+  margin: 5px 5px 10px 5px;
+}
+
+.also-menu-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  width: 100%;
+}
+
+aside {
+  background: orange;
+  width: 168px;
+  margin: 0;
+}
+
+.content {
+  background: red;
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+
+.bio-textbox {
+  width: 260px;
+  border: 1px solid black;
+}
+
+.bio-textbox img {
+  width: 220px;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.footer {
+  background: blue;
+  width: 100%;
+  box-sizing: border-box;
+  height: 109px;
+}
