@@ -5,7 +5,7 @@
 body {
   display: flex;
   margin: 0;
-
+  font-family: sans-serif;
 }
 
 .wrapper {
@@ -14,9 +14,9 @@ body {
 }
 
 .header {
-  background: turquoise;
+  background: white;
   width: 100%;
-  height: 50px;
+  height: 80px;
 }
 
 .user-menu {
@@ -36,21 +36,88 @@ body {
 }
 
 aside {
-  background: orange;
-  width: 168px;
+  background: #F6F6F6;
+  width: 176px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  order: 0;
+  flex: 0 0 auto;
+  border-right: 1px solid #a7d7f9;
+}
+
+aside ul {
+  list-style: none;
   margin: 0;
 }
 
+.siderbar-list-title-bold {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.sidebar-div, .sidebar-div-top{
+  margin-bottom: 10px;
+  border-bottom: 1px grey solid;
+  padding-bottom: 10px;
+}
+
+.sidebar-div ul {
+  padding: 0;
+  margin-left: 10px;
+}
+
+.sidebar-div-top ul{
+  margin-left: 5px;
+  padding: 0;
+}
+
 .content {
-  background: red;
+  background: #ffffff;
   width: 100%;
-  height: 800px;
-  position: relative;
+  border-top: 1px solid #a7d7f9;
+  border-bottom: 1px solid #a7d7f9;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+h1, h2 {
+  border-bottom: 1px solid #aaaaaa;
+}
+
+h5 {
+  font-size: 92%;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 150%;
+}
+
+a:link {
+  text-decoration: none;
+  color: #0645ad;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .bio-textbox {
-  width: 260px;
-  border: 1px solid black;
+  width: 282px;
+  border: 1px solid #aaaaaa;
+  float: right;
+  background: #f9f9f9;
+
+  box-sizing: border-box;
+  margin: 6px 0px 12px 12px;
+  padding: 5px 25px 5px;
+
 }
 
 .bio-textbox img {
@@ -59,14 +126,42 @@ aside {
   text-align: center;
 }
 
-h2 {
+h3 {
   text-align: center;
   margin-top: 5px;
 }
 
-.footer {
-  background: blue;
-  width: 100%;
+.content-table {
+  border: 1px solid black;
+  display: inline-block;
   box-sizing: border-box;
+  padding: 7px;
+}
+
+.content-table ul {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.footer {
+  background: #F6F6F6
+  width: 100%;
   height: 109px;
+}
+
+dl {
+  margin-bottom: 10px;
+}
+
+dt {
+  float: left;
+  margin-left: 5px;
+  clear: left;
+  text-align: right;
+  font-weight: bold;
+}
+
+dd {
+  text-align: left;
+  padding-left: 95px;
 }
