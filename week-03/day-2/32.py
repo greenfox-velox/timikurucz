@@ -7,3 +7,8 @@ def double (input):
     return input
 
 print (double(af))
+
+#refactoring
+def double (input):
+    return input * 2
+print (double(af))
