@@ -5,6 +5,6 @@ b = 0
 length_ah = len(ah)
 
 while b < length_ah:
-    ah[b] = ah[b] + "a"
+    ah[b] += "a"
     b += 1
 print (ah)
