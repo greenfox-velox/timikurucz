@@ -14,7 +14,6 @@
 # square_drawing(10)
 # root.mainloop()
 
-
 from tkinter import*
 root = Tk()
 
