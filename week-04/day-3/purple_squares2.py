@@ -13,7 +13,6 @@ def square_drawing(x, y, size):
 
 square_drawing(10,10,10)
 
-
 # square = canvas.create_rectangle(10, 10, 20, 20, fill='purple')
 # --> a vegkoordinatak nonek 10-zel
 # square = canvas.create_rectangle(20, 20, 40, 40, fill='purple')

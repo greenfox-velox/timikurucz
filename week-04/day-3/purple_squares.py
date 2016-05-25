@@ -10,7 +10,6 @@
 #     for i in range(20):
 #         position = size*i
 #         square = canvas.create_rectangle(top_left+position, top_left+position, bottom_right+position, bottom_right+position, fill='purple')
-#
 # square_drawing(10)
 # root.mainloop()
 
