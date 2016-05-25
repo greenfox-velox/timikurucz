@@ -27,5 +27,4 @@ for i in range(16):
     line_drawing(width, y)
 
 line_drawing(0, 0)
-
 root.mainloop()
