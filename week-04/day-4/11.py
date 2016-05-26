@@ -1,10 +1,9 @@
 from tkinter import*
 root = Tk()
-
-canvas_size = 300
-
+canvas_size = 600
 canvas = Canvas(root, width = canvas_size, height = canvas_size, bg='yellow')
 canvas.pack()
+
 
 def fractal(x, y, size):
     canvas.create_rectangle(x+size, y, x+2*size, y+size)
@@ -14,11 +13,11 @@ def fractal(x, y, size):
     if size < 5:
         pass
     else:
-        fractal(x+size, y, size//3)
-        fractal(x, y+size, size//3)
-        fractal(x+size*2, y+size, size//3)
-        fractal(x+size, y+2*size, size//3)
+        fractal(x+size, y, size/3)
+        fractal(x, y+size, size/3)
+        fractal(x+size*2, y+size, size/3)
+        fractal(x+size, y+2*size, size/3)
 
-fractal(0,0,100)
+fractal(0,0,200)
 
 root.mainloop()
