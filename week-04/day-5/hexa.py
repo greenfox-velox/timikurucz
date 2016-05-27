@@ -15,16 +15,14 @@ def fractal(x, y, size):
         pass
     else:
         new_size = size/3
-        total_height=(3**0.5/2*(new_size))*4
+        total_height=(3**0.5/2*(new_size))*2
 
         fractal(x+new_size, y, new_size)
         fractal(x+size, y, new_size)
-        fractal(x+new_size, y+total_height, new_size)
-        fractal(x+3*new_size, y+total_height, new_size)
-        fractal(x, y+total_height/2, new_size)
-        fractal(x+4*new_size, y+total_height/2, new_size)
-
-
+        fractal(x+new_size, y+total_height*2, new_size)
+        fractal(x+3*new_size, y+total_height*2, new_size)
+        fractal(x, y+total_height, new_size)
+        fractal(x+4*new_size, y+total_height, new_size)
 fractal(0,0,100)
 
 root.mainloop()
