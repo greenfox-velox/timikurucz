@@ -37,7 +37,9 @@ class TodoApp:
         f = open(self.file_name)
         text_list = f.readlines()
         try:
-            if (len(text_list)-1) < int(task_num):
+            if (len(text_list)) == 1 and task_num == len(text_list):
+                text_list.remove(text_list[0])
+            elif (len(text_list)) < int(task_num):
                 print('Unable to remove: Index is out of bound')
             else:
                 text_list.remove(text_list[int(task_num)-1])
