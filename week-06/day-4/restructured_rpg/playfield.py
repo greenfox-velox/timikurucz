@@ -1,4 +1,4 @@
-from tile import *
+from board_element import *
 from floor import *
 from wall import *
 from area import *

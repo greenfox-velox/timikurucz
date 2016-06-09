@@ -1,5 +1,5 @@
 from tkinter import *
-from tile import *
+from board_element import *
 
 class Wall(BoardElement):
     def __init__(self, x, y, canvas):

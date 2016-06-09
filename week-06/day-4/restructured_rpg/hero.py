@@ -1,7 +1,6 @@
 from tkinter import *
-from tile import *
+from board_element import *
 from random import randint
-from area import *
 from gameboard import *
 from characters import *
 

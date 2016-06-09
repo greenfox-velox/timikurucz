@@ -1,4 +1,4 @@
-from tile import *
+from board_element import *
 from characters import *
 from hero import *
 from skeleton import *
