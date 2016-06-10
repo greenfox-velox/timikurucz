@@ -9,6 +9,7 @@ class Hero(Character):
     def __init__(self, canvas, map_tile):
         super().__init__(0, 0, canvas)
         self.hero_img = PhotoImage(file = 'hero-down.png')
+        self.name = 'Hero'
         self.map_tile = map_tile
         self.max_hp = 0
         self.current_hp = 20 + (self.rolled_num + self.rolled_num + self.rolled_num)

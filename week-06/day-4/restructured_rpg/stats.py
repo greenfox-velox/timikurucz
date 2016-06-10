@@ -8,11 +8,11 @@ class Stats():
         # self.y = 100
         pass
 
-    def draw_stat(self, canvas, enemy, x, y):
-        self.stat = 'Hero (Level ' + str(enemy.level) + ') HP: ' + str(enemy.current_hp) + '/' + str(enemy.max_hp) + ' | DP: ' + str(enemy.defend_point) + ' | SP: ' + str(enemy.strike_point)
+    def draw_stat(self, canvas, character, x, y):
+        self.stat = character.name + '(Level ' + str(character.level) + ') HP: ' + str(character.current_hp) + '/' + str(character.max_hp) + ' | DP: ' + str(character.defend_point) + ' | SP: ' + str(character.strike_point)
         canvas.create_text(x, y, text = self.stat)
 
-    #
+
     # def draw_hero_stat(self, canvas):
     #     self.stat = 'Hero (Level ' + str(self.bela.level) + ') HP: ' + str(self.bela.current_hp) + '/' + str(self.bela.max_hp) + ' | DP: ' + str(self.bela.defend_point) + ' | SP: ' + str(self.bela.strike_point)
     #     canvas.create_text(self.x, self.y, text = self.stat)

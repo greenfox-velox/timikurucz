@@ -7,6 +7,7 @@ class Boss(Character):
     def __init__(self, canvas, map_tile, x, y):
         super().__init__(x, y, canvas)
         self.boss_img = PhotoImage(file = 'boss.png')
+        self.name = 'Boss'
         self.map_tile = map_tile
         self.level = 1
         self.max_hp = 0

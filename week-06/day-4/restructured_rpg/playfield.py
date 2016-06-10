@@ -31,20 +31,3 @@ class Map():
 
     def next_floor_is_occupied(self, x, y, enemy):
         return x == enemy.x and y == enemy.y
-
-
-    # def create_matrix_element(self, rows, columns):
-    #     for x in range(rows):
-    #         for y in range(columns):
-    #             self.create_matrix_for_map(x, y)
-    #
-    # def create_matrix_for_map(self, x, y):
-    #     if self.tile_map[y][x] == 0:
-    #         self.map.append(Floor(x, y))
-    #     else:
-    #         self.map.append(Wall(x, y))
-    #
-    # def draw_tile(self, canvas):
-    #     self.create_matrix_element(rows, columns)
-    #     for tile in self.map:
-    #         tile.draw(canvas)

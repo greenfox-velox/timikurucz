@@ -19,7 +19,6 @@ class Board():
         self.playfield.create_map()
         self.stat.draw_stat(canvas, self.bela, 850, 100)
         self.draw()
-        # self.stat.draw_hero_stat(self.canvas)
 
     def key_pressed(self, event):
         next_x = self.bela.x
@@ -37,7 +36,6 @@ class Board():
                 self.stat.draw_stat(self.canvas, self.boss, 850, 500)
             self.bela.move(next_x, next_y, self.bela.images[event.keysym])
             self.draw()
-
 
     def draw_skeletons(self):
         for skeleton in self.skeletons:
