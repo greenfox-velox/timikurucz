@@ -7,16 +7,16 @@ var numbers = [2, 5, 11, 29];
 
 function isPrime(inputArray) {
   return inputArray.every(function (e) {
-    if (e < 2 ) {
+    if (e < 2) {
       return false;
     }
-    for(var i = 3; i < e; i++) {
+    for (var i = 3; i < e; i++) {
       if (e % i === 0) {
         return false;
       }
     }
     return true;
-  })
+  });
 }
 
 console.log(isPrime(numbers));

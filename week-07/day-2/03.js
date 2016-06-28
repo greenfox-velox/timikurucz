@@ -12,8 +12,9 @@ function each(arr, func) {
 
 // with forEach:
 function each(arr, func) {
-  arr.forEach(function(e) {
-    func(e)});
+  arr.forEach(function (e) {
+    func(e);
+  });
 }
 
 
