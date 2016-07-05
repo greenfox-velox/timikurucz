@@ -11,22 +11,19 @@
 //  - color: the cars type as a string (eg: 'red')
 //  - balance: the cars parking credis as a number (eg: 500)
 
-var carId = 0;
-
 function Car(type, color, balance) {
   this.type = type;
   this.color = color;
   this.balance = balance;
   this.lastEnterDate = 0;
-  this.id = carId;
-  carId ++;
+  this.id = Car.ids;
+  Car.ids ++;
 }
 
 // every car should have an id property (a number), that is
 // unique for all the cars, starting form 0
-//
+Car.ids = 0;
 
-// Car.ids = 0;
 
 // Methods:
 // enter(enterDate) - it should store the date of entering
