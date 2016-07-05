@@ -66,17 +66,19 @@ bigRightArrow.appendChild(arrowRight);
 
 
 function clickArrowRight() {
-  if (bigImageIndex === (imagesList.length) - 1) {
-    bigImageIndex = 0;
-  } else {
+  if (bigImageIndex < (imagesList.length) - 1) {
     bigImageIndex ++;
+  } else {
+    bigImageIndex = 0;
   }
 }
 
 function clickArrowLeft() {
   if (bigImageIndex > 0) {
     bigImageIndex --;
-  } else { bigImageIndex = (imagesList.length) - 1; }
+  } else {
+    bigImageIndex = (imagesList.length) - 1;
+  }
 }
 
 function showNextBigImage() {
