@@ -16,7 +16,7 @@ Rectangle.prototype.getArea = function () {
 };
 
 Rectangle.prototype.getCircumference = function () {
-  return 2*(this.a + this.b);
+  return 2 * (this.a + this.b);
 };
 
 var proba = new Rectangle(4, 6);

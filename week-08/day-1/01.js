@@ -9,12 +9,11 @@ function newLetterCounter(string) {
   var lettersList = string.split('');
   var letters = {};
   lettersList.forEach(function (e) {
-    letters[e] = letters[e] +1 || 1;
+    letters[e] = letters[e] + 1 || 1;
   });
   return letters;
 }
 console.log(newLetterCounter('apple'));
-
 
 
 // // with for loop:
