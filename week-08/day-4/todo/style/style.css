@@ -1,0 +1,96 @@
+body {
+  background-color: #50e3c2;
+}
+
+form {
+  border:1px solid grey;
+  display:inline-block;
+  width: 80%;
+  height: 50px;
+}
+
+input, .add-button {
+    background-color:transparent;
+    border:0;
+    height: 100%;
+}
+
+.content {
+  text-align:justify;
+}
+
+.wrapper {
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: #f7f7f7;
+  width: 50%;
+  text-align: center;
+  min-height: 60%;
+}
+
+.heading {
+    font-family: Lato-Light, sans-serif;
+    font-size: 64px;
+    color: #9b9b9b;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+li {
+    list-style-type: none;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    line-height: 2.2;
+    color: #9b9b9b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*color: #cecece;*/
+}
+
+.fade{
+    color: #cecece;
+}
+
+.button-text, .add-button{
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    color: #ffffff;
+    background-color: #df69e8;
+    float: right;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  height: 30px;
+}
+
+.del-button {
+  background-image: url("../img/delete.png");
+  background-size: 100%;
+  height: 40px;
+  width: 40px;
+  float: right;
+
+}
+
+.checked-button {
+  background-image: url("../img/check.png");
+  background-size: 100%;
+  height: 40px;
+  width: 40px;
+  float: right;
+  margin-right: 50px;
+}
+
+.unchecked-button{
+  background-image: url("../img/circle.png");
+  background-size: 100%;
+  height: 40px;
+  width: 40px;
+  float: right;
+  margin-right: 50px;
+}
