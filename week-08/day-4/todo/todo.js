@@ -6,12 +6,19 @@ var todoContainer = document.querySelector('.todo-container');
 var host = 'https://mysterious-dusk-8248.herokuapp.com';
 
 function createOneNewTodo(todo) {
-  var newItem = document.createElement('li');
-  newItem.textContent = todo.text;
-  newItem.setAttribute('id', 'l' + todo.id);
-  todoContainer.appendChild(newItem);
-  createDelButton(newItem, todo);
-  createcheckButton(newItem, todo);
+  var newLi = document.createElement('li');
+  var newDiv = document.createElement('div');
+  newDiv.setAttribute('id', 't' + todo.id);
+  newDiv.classList.add('text');
+  newDiv.textContent = todo.text;
+  newLi.setAttribute('id', 'l' + todo.id);
+  newLi.appendChild(newDiv);
+  todoContainer.appendChild(newLi);
+  var newDivForButtons = document.createElement('div');
+  newLi.appendChild(newDivForButtons);
+
+  createDelButton(newDivForButtons, todo);
+  createcheckButton(newDivForButtons, todo);
 }
 
 
@@ -57,18 +64,25 @@ function createDelButton(parent, todo) {
   parent.appendChild(del);
   del.addEventListener('click', function(event){
     delTodo(event, del.id);
+  console.log(event);
+  console.log(del.id);
   });
 }
 
 function deleteLi(event){
   var ul = document.querySelector('ul');
-  var proba = document.querySelector('#l' + event.target.id.slice(1,10));
-  ul.removeChild(proba);
+  var itemToDel = document.querySelector('#l' + event.target.id.slice(1,10));
+  // console.log(itemToDel);
+  // console.log(event.target.id);
+  // console.log('l' + event.target.id.slice(1,10));
+  ul.removeChild(itemToDel);
 }
 
-function delTodo(event, id) {
+function delTodo(event, delId) {
   var xhr = new XMLHttpRequest();
-  var serverId = event.target.id.slice(1, 10);
+  // console.log(event);
+  // console.log(delId);
+  var serverId = delId.slice(1,10);
   var endPoint = '/todos/' + serverId;
   xhr.open('DELETE', host + endPoint);
   xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
@@ -86,7 +100,8 @@ function createcheckButton(parent, todo) {
     check.classList.add('unchecked-button');
   }
   parent.appendChild(check);
-  check.setAttribute('id', parent.id);
+  check.setAttribute('id', 'c' + todo.id);
+  console.log(check.id);
   check.addEventListener('click', function(event){
     checkTodo(event, check.id);
   });
@@ -107,23 +122,34 @@ function checkLi(event){
   }
 }
 
-function getText(id){
-  var allLi = document.querySelectorAll('ul > li');
-  console.log(allLi);
-  for (var i = 0; i <= allLi.length - 1; i++) {
-    if ((allLi[i]).id === event.target.id) {
-      return (allLi[i]).textContent;
+function getText(input, serverId){
+  // console.log(input);
+  // console.log(serverId);
+  var divs = document.querySelectorAll('.text');
+  // console.log(divs);
+  for (var i = 0; i <= divs.length - 1; i++) {
+    // console.log((divs[i]).textContent);
+    // console.log((divs[i].id));
+    // console.log(serverId);
+    if ((divs[i]).id === input.id) {
+      return (divs[i]).textContent;
     }
   }
 }
 
-function checkTodo(event, id) {
+
+
+function checkTodo(event, checkId) {
   var xhr = new XMLHttpRequest();
-  var serverId = event.target.id.slice(1,10);
+  var serverId = checkId.slice(1,10);
+  console.log(event.target.id.slice(1,10));
+  console.log(checkId);
+  console.log(checkId.slice(1,10));
   var endPoint = '/todos/' + serverId;
   console.log(endPoint);
-  var blabla = document.querySelector('#l' + serverId);
-  var textToSend = JSON.stringify({ text: getText(blabla), completed: true });
+  var item = document.querySelector('#t' + serverId);
+  console.log(item);
+  var textToSend = JSON.stringify({ text: getText(item, serverId), completed: true });
   xhr.open('PUT', host + endPoint);
   xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
   xhr.onload = function() {

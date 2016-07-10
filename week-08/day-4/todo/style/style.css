@@ -15,10 +15,6 @@ input, .add-button {
     height: 100%;
 }
 
-.content {
-  text-align:justify;
-}
-
 .wrapper {
   margin: 0 auto;
   margin-top: 40px;
@@ -73,7 +69,7 @@ button {
   background-size: 100%;
   height: 40px;
   width: 40px;
-  float: right;
+  float: left;
 
 }
 
@@ -83,7 +79,7 @@ button {
   height: 40px;
   width: 40px;
   float: right;
-  margin-right: 50px;
+  margin-left: 20px;
 }
 
 .unchecked-button{
@@ -92,5 +88,17 @@ button {
   height: 40px;
   width: 40px;
   float: right;
-  margin-right: 50px;
+  margin-left: 20px;
+}
+
+img {
+  width: 30px;
+}
+
+.todo-container {
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  margin: 20px;
 }
