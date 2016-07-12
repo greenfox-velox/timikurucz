@@ -5,6 +5,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(bodyParser.json());
+app.use(express.static('../../../week-08/day-4/todo'));
+
 
 var todoId = 3;
 
@@ -116,17 +118,19 @@ function delOneTodo(itemId) {
 // }
 
 
-app.delete ('/todos/:id', urlencodedParser, function(req, res) {
-  res.send(delOneTodo(req.params.id));
-});
-
-// app.delete('/todos/:id', urlencodedParser, function(req, res) {
-//   if (err) {
-//     res.status(404);
-//   } else {
-//     res.send(delOneTodo(req.params.id));
-//   }
+// app.delete ('/todos/:id', urlencodedParser, function(req, res) {
+//   res.send(delOneTodo(req.params.id));
 // });
+
+
+app.delete ('/todos/:id', urlencodedParser, function(req, res) {
+  if (getOneTodo(req.params.id)){
+    res.send(delOneTodo(req.params.id));
+  }
+  else {
+    res.sendStatus(404);
+  }
+});
 
 
 app.listen(3000);
