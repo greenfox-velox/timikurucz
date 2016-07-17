@@ -8,6 +8,7 @@ var con = mysql.createConnection({
   database: 'todoapp',
 });
 
+
 con.connect(function(err){
   if(err){
     console.log("Error connecting to Db");
@@ -16,6 +17,12 @@ con.connect(function(err){
   console.log("Connection established");
 });
 
+function handleError (err) {
+  if(err) {
+    console.log(err.toString());
+    return;
+  }
+}
 
 function getAllTodos (req, cb) {
   var queryString = 'SELECT * FROM todos';
@@ -23,49 +30,35 @@ function getAllTodos (req, cb) {
     queryString += ' WHERE completed = 0';
   }
   con.query(queryString, function (err, rows) {
-    if (err) {
-      console.log(err.toString());
-      return;
-    }
+    handleError(err);
     cb(rows);
   });
 }
 
 function getOneTodoItem(req, cb) {
   con.query('SELECT * FROM todos WHERE id = ?', req.params.id, function (err, rows) {
-    if (err) {
-      console.log(err.toString());
-      return;
-    }
+    handleError(err);
     cb(rows[0]);
   });
 }
 
 function addNewTodo(req, cb) {
   con.query("INSERT INTO todos (text) VALUES ('"+req.body.text+"')", function (err, rows) {
-    if (err) {
-      console.log(err.toString());
-      return;
-    }
+    handleError(err);
     cb({ id: rows.insertId, text: req.body.text });
   });
 }
 
 function updateOneTodo(req, cb) {
   con.query('UPDATE todos SET completed = 1 WHERE id = ?', req.params.id, function (err, rows) {
-    if (err) {
-      console.log(err.toString());
-      return;
-    } cb({ id: rows.insertId, completed: true });
+    handleError(err);
+    cb({ id: rows.insertId, completed: true });
   });
 }
 
 function deleteOneTodo(req, cb) {
   con.query('DELETE FROM todos WHERE id = ?', req.params.id, function (err, rows) {
-    if (err) {
-      console.log(err.toString());
-      return;
-    }
+    handleError(err);
     cb({ id: req.param.id, destroyed: true });
   });
 }
